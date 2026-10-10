@@ -1,0 +1,1161 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "province": "Aceh",
+        "name": "Aceh"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              95.0,
+              2.0
+            ],
+            [
+              98.3,
+              2.0
+            ],
+            [
+              98.3,
+              6.1
+            ],
+            [
+              95.0,
+              6.1
+            ],
+            [
+              95.0,
+              2.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "province": "Sumatera Utara",
+        "name": "Sumatera Utara"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              97.0,
+              1.3
+            ],
+            [
+              100.6,
+              1.3
+            ],
+            [
+              100.6,
+              4.3
+            ],
+            [
+              97.0,
+              4.3
+            ],
+            [
+              97.0,
+              1.3
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "province": "Sumatera Barat",
+        "name": "Sumatera Barat"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              98.6,
+              -2.5
+            ],
+            [
+              101.9,
+              -2.5
+            ],
+            [
+              101.9,
+              0.9
+            ],
+            [
+              98.6,
+              0.9
+            ],
+            [
+              98.6,
+              -2.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "province": "Riau",
+        "name": "Riau"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              100.0,
+              -1.1
+            ],
+            [
+              103.8,
+              -1.1
+            ],
+            [
+              103.8,
+              2.5
+            ],
+            [
+              100.0,
+              2.5
+            ],
+            [
+              100.0,
+              -1.1
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "province": "Jambi",
+        "name": "Jambi"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              101.1,
+              -2.8
+            ],
+            [
+              104.5,
+              -2.8
+            ],
+            [
+              104.5,
+              -0.7
+            ],
+            [
+              101.1,
+              -0.7
+            ],
+            [
+              101.1,
+              -2.8
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "province": "Sumatera Selatan",
+        "name": "Sumatera Selatan"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              102.1,
+              -4.9
+            ],
+            [
+              106.2,
+              -4.9
+            ],
+            [
+              106.2,
+              -1.6
+            ],
+            [
+              102.1,
+              -1.6
+            ],
+            [
+              102.1,
+              -4.9
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "province": "Bengkulu",
+        "name": "Bengkulu"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              101.0,
+              -5.5
+            ],
+            [
+              103.8,
+              -5.5
+            ],
+            [
+              103.8,
+              -2.3
+            ],
+            [
+              101.0,
+              -2.3
+            ],
+            [
+              101.0,
+              -5.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "province": "Lampung",
+        "name": "Lampung"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              103.6,
+              -6.0
+            ],
+            [
+              105.8,
+              -6.0
+            ],
+            [
+              105.8,
+              -3.7
+            ],
+            [
+              103.6,
+              -3.7
+            ],
+            [
+              103.6,
+              -6.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "province": "Kepulauan Bangka Belitung",
+        "name": "Kepulauan Bangka Belitung"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              105.1,
+              -3.5
+            ],
+            [
+              108.3,
+              -3.5
+            ],
+            [
+              108.3,
+              -1.5
+            ],
+            [
+              105.1,
+              -1.5
+            ],
+            [
+              105.1,
+              -3.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "province": "Kepulauan Riau",
+        "name": "Kepulauan Riau"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              103.3,
+              -1.0
+            ],
+            [
+              109.2,
+              -1.0
+            ],
+            [
+              109.2,
+              4.8
+            ],
+            [
+              103.3,
+              4.8
+            ],
+            [
+              103.3,
+              -1.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "province": "DKI Jakarta",
+        "name": "DKI Jakarta"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              106.7,
+              -6.4
+            ],
+            [
+              106.9,
+              -6.4
+            ],
+            [
+              106.9,
+              -6.1
+            ],
+            [
+              106.7,
+              -6.1
+            ],
+            [
+              106.7,
+              -6.4
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "province": "Jawa Barat",
+        "name": "Jawa Barat"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              106.4,
+              -7.8
+            ],
+            [
+              108.8,
+              -7.8
+            ],
+            [
+              108.8,
+              -5.9
+            ],
+            [
+              106.4,
+              -5.9
+            ],
+            [
+              106.4,
+              -7.8
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "province": "Jawa Tengah",
+        "name": "Jawa Tengah"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              108.9,
+              -8.2
+            ],
+            [
+              111.6,
+              -8.2
+            ],
+            [
+              111.6,
+              -6.4
+            ],
+            [
+              108.9,
+              -6.4
+            ],
+            [
+              108.9,
+              -8.2
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "province": "DI Yogyakarta",
+        "name": "DI Yogyakarta"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              110.0,
+              -8.2
+            ],
+            [
+              110.8,
+              -8.2
+            ],
+            [
+              110.8,
+              -7.5
+            ],
+            [
+              110.0,
+              -7.5
+            ],
+            [
+              110.0,
+              -8.2
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "province": "Jawa Timur",
+        "name": "Jawa Timur"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              111.0,
+              -8.8
+            ],
+            [
+              114.6,
+              -8.8
+            ],
+            [
+              114.6,
+              -6.7
+            ],
+            [
+              111.0,
+              -6.7
+            ],
+            [
+              111.0,
+              -8.8
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "province": "Banten",
+        "name": "Banten"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              105.1,
+              -7.0
+            ],
+            [
+              106.7,
+              -7.0
+            ],
+            [
+              106.7,
+              -5.8
+            ],
+            [
+              105.1,
+              -5.8
+            ],
+            [
+              105.1,
+              -7.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "province": "Bali",
+        "name": "Bali"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              114.4,
+              -8.9
+            ],
+            [
+              115.7,
+              -8.9
+            ],
+            [
+              115.7,
+              -8.0
+            ],
+            [
+              114.4,
+              -8.0
+            ],
+            [
+              114.4,
+              -8.9
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "province": "Nusa Tenggara Barat",
+        "name": "Nusa Tenggara Barat"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              115.8,
+              -9.1
+            ],
+            [
+              119.4,
+              -9.1
+            ],
+            [
+              119.4,
+              -8.1
+            ],
+            [
+              115.8,
+              -8.1
+            ],
+            [
+              115.8,
+              -9.1
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "province": "Nusa Tenggara Timur",
+        "name": "Nusa Tenggara Timur"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              118.9,
+              -11.0
+            ],
+            [
+              125.2,
+              -11.0
+            ],
+            [
+              125.2,
+              -8.2
+            ],
+            [
+              118.9,
+              -8.2
+            ],
+            [
+              118.9,
+              -11.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "province": "Kalimantan Barat",
+        "name": "Kalimantan Barat"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              108.8,
+              -3.1
+            ],
+            [
+              114.2,
+              -3.1
+            ],
+            [
+              114.2,
+              2.1
+            ],
+            [
+              108.8,
+              2.1
+            ],
+            [
+              108.8,
+              -3.1
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "province": "Kalimantan Tengah",
+        "name": "Kalimantan Tengah"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              111.0,
+              -3.6
+            ],
+            [
+              115.8,
+              -3.6
+            ],
+            [
+              115.8,
+              0.8
+            ],
+            [
+              111.0,
+              0.8
+            ],
+            [
+              111.0,
+              -3.6
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "province": "Kalimantan Selatan",
+        "name": "Kalimantan Selatan"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              114.3,
+              -4.2
+            ],
+            [
+              116.6,
+              -4.2
+            ],
+            [
+              116.6,
+              -1.3
+            ],
+            [
+              114.3,
+              -1.3
+            ],
+            [
+              114.3,
+              -4.2
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "province": "Kalimantan Timur",
+        "name": "Kalimantan Timur"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              113.8,
+              -2.5
+            ],
+            [
+              119.1,
+              -2.5
+            ],
+            [
+              119.1,
+              2.5
+            ],
+            [
+              113.8,
+              2.5
+            ],
+            [
+              113.8,
+              -2.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "province": "Kalimantan Utara",
+        "name": "Kalimantan Utara"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              114.5,
+              1.1
+            ],
+            [
+              118.0,
+              1.1
+            ],
+            [
+              118.0,
+              4.4
+            ],
+            [
+              114.5,
+              4.4
+            ],
+            [
+              114.5,
+              1.1
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "province": "Sulawesi Utara",
+        "name": "Sulawesi Utara"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              123.1,
+              0.3
+            ],
+            [
+              125.7,
+              0.3
+            ],
+            [
+              125.7,
+              4.8
+            ],
+            [
+              123.1,
+              4.8
+            ],
+            [
+              123.1,
+              0.3
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "province": "Sulawesi Tengah",
+        "name": "Sulawesi Tengah"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              119.4,
+              -3.3
+            ],
+            [
+              124.3,
+              -3.3
+            ],
+            [
+              124.3,
+              1.4
+            ],
+            [
+              119.4,
+              1.4
+            ],
+            [
+              119.4,
+              -3.3
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "province": "Sulawesi Selatan",
+        "name": "Sulawesi Selatan"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              118.7,
+              -5.8
+            ],
+            [
+              121.7,
+              -5.8
+            ],
+            [
+              121.7,
+              -1.9
+            ],
+            [
+              118.7,
+              -1.9
+            ],
+            [
+              118.7,
+              -5.8
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "province": "Sulawesi Tenggara",
+        "name": "Sulawesi Tenggara"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              120.9,
+              -6.2
+            ],
+            [
+              124.1,
+              -6.2
+            ],
+            [
+              124.1,
+              -2.8
+            ],
+            [
+              120.9,
+              -2.8
+            ],
+            [
+              120.9,
+              -6.2
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "province": "Gorontalo",
+        "name": "Gorontalo"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              121.2,
+              0.3
+            ],
+            [
+              123.6,
+              0.3
+            ],
+            [
+              123.6,
+              1.1
+            ],
+            [
+              121.2,
+              1.1
+            ],
+            [
+              121.2,
+              0.3
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "province": "Sulawesi Barat",
+        "name": "Sulawesi Barat"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              118.7,
+              -3.6
+            ],
+            [
+              119.9,
+              -3.6
+            ],
+            [
+              119.9,
+              -1.1
+            ],
+            [
+              118.7,
+              -1.1
+            ],
+            [
+              118.7,
+              -3.6
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "province": "Maluku",
+        "name": "Maluku"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              125.7,
+              -8.3
+            ],
+            [
+              131.6,
+              -8.3
+            ],
+            [
+              131.6,
+              -2.8
+            ],
+            [
+              125.7,
+              -2.8
+            ],
+            [
+              125.7,
+              -8.3
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "province": "Maluku Utara",
+        "name": "Maluku Utara"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              124.2,
+              -2.5
+            ],
+            [
+              129.7,
+              -2.5
+            ],
+            [
+              129.7,
+              2.6
+            ],
+            [
+              124.2,
+              2.6
+            ],
+            [
+              124.2,
+              -2.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "province": "Papua Barat",
+        "name": "Papua Barat"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              129.2,
+              -4.3
+            ],
+            [
+              135.2,
+              -4.3
+            ],
+            [
+              135.2,
+              1.1
+            ],
+            [
+              129.2,
+              1.1
+            ],
+            [
+              129.2,
+              -4.3
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "province": "Papua",
+        "name": "Papua"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              134.2,
+              -9.1
+            ],
+            [
+              141.0,
+              -9.1
+            ],
+            [
+              141.0,
+              -0.9
+            ],
+            [
+              134.2,
+              -0.9
+            ],
+            [
+              134.2,
+              -9.1
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}

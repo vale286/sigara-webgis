@@ -1,0 +1,710 @@
+[
+  {
+    "rank": 1,
+    "icd_code": "Z098",
+    "diagnosis_name": "Jumlah Peserta",
+    "visits": 29115874.0,
+    "participants": 6661148.0
+  },
+  {
+    "rank": 2,
+    "icd_code": "Jumlah Peserta",
+    "diagnosis_name": "Follow-up examination after other treatment for other conditions",
+    "visits": 9962920.0,
+    "participants": 3426031.0
+  },
+  {
+    "rank": 3,
+    "icd_code": "Z501",
+    "diagnosis_name": "Followup examination after other treatment for other conditions",
+    "visits": 4245536.0,
+    "participants": 399440.0
+  },
+  {
+    "rank": 4,
+    "icd_code": "Z491",
+    "diagnosis_name": "Other physical therapy",
+    "visits": 2793201.0,
+    "participants": 54069.0
+  },
+  {
+    "rank": 5,
+    "icd_code": "Z099",
+    "diagnosis_name": "Extracorporeal dialysis",
+    "visits": 1062577.0,
+    "participants": 288915.0
+  },
+  {
+    "rank": 6,
+    "icd_code": "Z961",
+    "diagnosis_name": "Follow-up examination after unspecified treatment for other conditions",
+    "visits": 856668.0,
+    "participants": 301103.0
+  },
+  {
+    "rank": 7,
+    "icd_code": "Z760",
+    "diagnosis_name": "Presence of intraocular lens",
+    "visits": 852447.0,
+    "participants": 197878.0
+  },
+  {
+    "rank": 8,
+    "icd_code": "Z090",
+    "diagnosis_name": "Issue of repeat prescription",
+    "visits": 823941.0,
+    "participants": 492443.0
+  },
+  {
+    "rank": 9,
+    "icd_code": "Z480",
+    "diagnosis_name": "Follow-up examination after surgery for other conditions",
+    "visits": 716246.0,
+    "participants": 417363.0
+  },
+  {
+    "rank": 10,
+    "icd_code": "Z992",
+    "diagnosis_name": "Attention to surgical dressings and sutures",
+    "visits": 680147.0,
+    "participants": 16147.0
+  },
+  {
+    "rank": 11,
+    "icd_code": "K30",
+    "diagnosis_name": "Dependence on renal dialysis",
+    "visits": 586562.0,
+    "participants": 509545.0
+  },
+  {
+    "rank": 12,
+    "icd_code": "Z867",
+    "diagnosis_name": "Dyspepsia",
+    "visits": 563698.0,
+    "participants": 145863.0
+  },
+  {
+    "rank": 13,
+    "icd_code": "Z509",
+    "diagnosis_name": "Personal history of diseases of the circulatory system",
+    "visits": 536737.0,
+    "participants": 56379.0
+  },
+  {
+    "rank": 14,
+    "icd_code": "Z010",
+    "diagnosis_name": "Care involving use of rehabilitation procedure, unspecified",
+    "visits": 503226.0,
+    "participants": 217733.0
+  },
+  {
+    "rank": 15,
+    "icd_code": "Z093",
+    "diagnosis_name": "Examination of eyes and vision",
+    "visits": 502585.0,
+    "participants": 85398.0
+  },
+  {
+    "rank": 16,
+    "icd_code": "Z719",
+    "diagnosis_name": "Follow-up examination after psychotherapy",
+    "visits": 482392.0,
+    "participants": 286234.0
+  },
+  {
+    "rank": 17,
+    "icd_code": "Z490",
+    "diagnosis_name": "Counselling, unspecified",
+    "visits": 481370.0,
+    "participants": 10774.0
+  },
+  {
+    "rank": 18,
+    "icd_code": "Z488",
+    "diagnosis_name": "Preparatory care for dialysis",
+    "visits": 430455.0,
+    "participants": 266802.0
+  },
+  {
+    "rank": 19,
+    "icd_code": "Z088",
+    "diagnosis_name": "Other specified surgical follow-up care",
+    "visits": 429361.0,
+    "participants": 109702.0
+  },
+  {
+    "rank": 20,
+    "icd_code": "Z510",
+    "diagnosis_name": "Follow-up examination after other treatment for malignant neoplasm",
+    "visits": 418459.0,
+    "participants": 22133.0
+  },
+  {
+    "rank": 21,
+    "icd_code": "H521",
+    "diagnosis_name": "Radiotherapy session",
+    "visits": 406724.0,
+    "participants": 396882.0
+  },
+  {
+    "rank": 22,
+    "icd_code": "Z012",
+    "diagnosis_name": "Myopia",
+    "visits": 392555.0,
+    "participants": 134366.0
+  },
+  {
+    "rank": 23,
+    "icd_code": "Z866",
+    "diagnosis_name": "Dental examination",
+    "visits": 365895.0,
+    "participants": 116390.0
+  },
+  {
+    "rank": 24,
+    "icd_code": "Z348",
+    "diagnosis_name": "Personal history of diseases of the nervous system and sense organs",
+    "visits": 365266.0,
+    "participants": 215957.0
+  },
+  {
+    "rank": 25,
+    "icd_code": "Z508",
+    "diagnosis_name": "Supervision of other normal pregnancy",
+    "visits": 361949.0,
+    "participants": 39909.0
+  },
+  {
+    "rank": 26,
+    "icd_code": "R509",
+    "diagnosis_name": "Care involving use of other rehabilitation procedures",
+    "visits": 348776.0,
+    "participants": 316284.0
+  },
+  {
+    "rank": 27,
+    "icd_code": "K041",
+    "diagnosis_name": "Fever, unspecified",
+    "visits": 345281.0,
+    "participants": 229310.0
+  },
+  {
+    "rank": 28,
+    "icd_code": "Z038",
+    "diagnosis_name": "Necrosis of pulp",
+    "visits": 344291.0,
+    "participants": 267981.0
+  },
+  {
+    "rank": 29,
+    "icd_code": "R104",
+    "diagnosis_name": "Observation for other suspected diseases and conditions",
+    "visits": 342170.0,
+    "participants": 305857.0
+  },
+  {
+    "rank": 30,
+    "icd_code": "J459",
+    "diagnosis_name": "Other and unspecified abdominal pain",
+    "visits": 316405.0,
+    "participants": 209572.0
+  },
+  {
+    "rank": 31,
+    "icd_code": "Z873",
+    "diagnosis_name": "Asthma, unspecified",
+    "visits": 314060.0,
+    "participants": 66973.0
+  },
+  {
+    "rank": 32,
+    "icd_code": "Extracorporeal dialysis",
+    "diagnosis_name": "Personal history of diseases of the musculoskeletal system and connective tissue",
+    "visits": 302127.0,
+    "participants": 123983.0
+  },
+  {
+    "rank": 33,
+    "icd_code": "Z097",
+    "diagnosis_name": "Followup examination after unspecified treatment for other conditions",
+    "visits": 297839.0,
+    "participants": 108957.0
+  },
+  {
+    "rank": 34,
+    "icd_code": "Issue of repeat prescription",
+    "diagnosis_name": "Follow-up examination after combined treatment for other conditions",
+    "visits": 289783.0,
+    "participants": 179050.0
+  },
+  {
+    "rank": 35,
+    "icd_code": "Z489",
+    "diagnosis_name": "Followup examination after surgery for other conditions",
+    "visits": 278100.0,
+    "participants": 179132.0
+  },
+  {
+    "rank": 36,
+    "icd_code": "Z865",
+    "diagnosis_name": "Surgical follow-up care, unspecified",
+    "visits": 272167.0,
+    "participants": 41123.0
+  },
+  {
+    "rank": 37,
+    "icd_code": "Z349",
+    "diagnosis_name": "Personal history of other mental and behavioural disorders",
+    "visits": 270862.0,
+    "participants": 172244.0
+  },
+  {
+    "rank": 38,
+    "icd_code": "I10",
+    "diagnosis_name": "Supervision of normal pregnancy, unspecified",
+    "visits": 268140.0,
+    "participants": 229469.0
+  },
+  {
+    "rank": 39,
+    "icd_code": "H524",
+    "diagnosis_name": "Essential (primary) hypertension",
+    "visits": 267120.0,
+    "participants": 263399.0
+  },
+  {
+    "rank": 40,
+    "icd_code": "Z511",
+    "diagnosis_name": "Presbyopia",
+    "visits": 246816.0,
+    "participants": 47534.0
+  },
+  {
+    "rank": 41,
+    "icd_code": "Z492",
+    "diagnosis_name": "Chemotherapy session for neoplasm",
+    "visits": 244877.0,
+    "participants": 6160.0
+  },
+  {
+    "rank": 42,
+    "icd_code": "A099",
+    "diagnosis_name": "Other dialysis",
+    "visits": 240236.0,
+    "participants": 226448.0
+  },
+  {
+    "rank": 43,
+    "icd_code": "H522",
+    "diagnosis_name": "Gastroenteritis and colitis of unspecified origin",
+    "visits": 239899.0,
+    "participants": 235462.0
+  },
+  {
+    "rank": 44,
+    "icd_code": "Personal history of diseases of the circulatory system",
+    "diagnosis_name": "Astigmatism",
+    "visits": 233459.0,
+    "participants": 31254.0
+  },
+  {
+    "rank": 45,
+    "icd_code": "K040",
+    "diagnosis_name": "Care involving use of rehabilitation procedure unspecified",
+    "visits": 229812.0,
+    "participants": 168353.0
+  },
+  {
+    "rank": 46,
+    "icd_code": "Z870",
+    "diagnosis_name": "Pulpitis",
+    "visits": 229183.0,
+    "participants": 87754.0
+  },
+  {
+    "rank": 47,
+    "icd_code": "Z359",
+    "diagnosis_name": "Personal history of diseases of the respiratory system",
+    "visits": 209972.0,
+    "participants": 116687.0
+  },
+  {
+    "rank": 48,
+    "icd_code": "Z863",
+    "diagnosis_name": "Supervision of high-risk pregnancy, unspecified",
+    "visits": 208077.0,
+    "participants": 61762.0
+  },
+  {
+    "rank": 49,
+    "icd_code": "M545",
+    "diagnosis_name": "Personal history of endocrine, nutritional and metabolic diseases",
+    "visits": 203761.0,
+    "participants": 131414.0
+  },
+  {
+    "rank": 50,
+    "icd_code": "E119",
+    "diagnosis_name": "Low back pain",
+    "visits": 197709.0,
+    "participants": 155306.0
+  },
+  {
+    "rank": 51,
+    "icd_code": "Z871",
+    "diagnosis_name": "Non-insulin-dependent diabetes mellitus without complications",
+    "visits": 194784.0,
+    "participants": 87704.0
+  },
+  {
+    "rank": 52,
+    "icd_code": "J069",
+    "diagnosis_name": "Personal history of diseases of the digestive system",
+    "visits": 191950.0,
+    "participants": 171988.0
+  },
+  {
+    "rank": 53,
+    "icd_code": "Z094",
+    "diagnosis_name": "Acute upper respiratory infection, unspecified",
+    "visits": 191754.0,
+    "participants": 78676.0
+  },
+  {
+    "rank": 54,
+    "icd_code": "N189",
+    "diagnosis_name": "Follow-up examination after treatment of fracture",
+    "visits": 181348.0,
+    "participants": 28041.0
+  },
+  {
+    "rank": 55,
+    "icd_code": "Z478",
+    "diagnosis_name": "Chronic renal failure, unspecified",
+    "visits": 181347.0,
+    "participants": 65661.0
+  },
+  {
+    "rank": 56,
+    "icd_code": "Z874",
+    "diagnosis_name": "Other specified orthopaedic follow-up care",
+    "visits": 180422.0,
+    "participants": 56115.0
+  },
+  {
+    "rank": 57,
+    "icd_code": "Z358",
+    "diagnosis_name": "Personal history of diseases of the genitourinary system",
+    "visits": 179040.0,
+    "participants": 91986.0
+  },
+  {
+    "rank": 58,
+    "icd_code": "H269",
+    "diagnosis_name": "Supervision of other high-risk pregnancies",
+    "visits": 176811.0,
+    "participants": 131673.0
+  },
+  {
+    "rank": 59,
+    "icd_code": "Z089",
+    "diagnosis_name": "Cataract, unspecified",
+    "visits": 176058.0,
+    "participants": 61292.0
+  },
+  {
+    "rank": 60,
+    "icd_code": "Z549",
+    "diagnosis_name": "Follow-up examination after unspecified treatment for malignant neoplasm",
+    "visits": 175222.0,
+    "participants": 44733.0
+  },
+  {
+    "rank": 61,
+    "icd_code": "Z505",
+    "diagnosis_name": "Convalescence following unspecified treatment",
+    "visits": 174257.0,
+    "participants": 16698.0
+  },
+  {
+    "rank": 62,
+    "icd_code": "Follow-up examination after psychotherapy",
+    "diagnosis_name": "Speech therapy",
+    "visits": 171631.0,
+    "participants": 110870.0
+  },
+  {
+    "rank": 63,
+    "icd_code": "Z861",
+    "diagnosis_name": "Counselling unspecified",
+    "visits": 163571.0,
+    "participants": 62459.0
+  },
+  {
+    "rank": 64,
+    "icd_code": "Z392",
+    "diagnosis_name": "Personal history of infectious and parasitic diseases",
+    "visits": 155268.0,
+    "participants": 129159.0
+  },
+  {
+    "rank": 65,
+    "icd_code": "I500",
+    "diagnosis_name": "Routine postpartum follow-up",
+    "visits": 147232.0,
+    "participants": 119981.0
+  },
+  {
+    "rank": 66,
+    "icd_code": "Examination of eyes and vision",
+    "diagnosis_name": "Congestive heart failure",
+    "visits": 146182.0,
+    "participants": 48286.0
+  },
+  {
+    "rank": 67,
+    "icd_code": "Preparatory care for dialysis",
+    "diagnosis_name": "Followup examination after psychotherapy",
+    "visits": 138917.0,
+    "participants": 88585.0
+  },
+  {
+    "rank": 68,
+    "icd_code": "Z390",
+    "diagnosis_name": "Other specified surgical followup care",
+    "visits": 137200.0,
+    "participants": 112106.0
+  },
+  {
+    "rank": 69,
+    "icd_code": "R51",
+    "diagnosis_name": "Care and examination immediately after delivery",
+    "visits": 133140.0,
+    "participants": 120167.0
+  },
+  {
+    "rank": 70,
+    "icd_code": "H520",
+    "diagnosis_name": "Headache",
+    "visits": 132418.0,
+    "participants": 130688.0
+  },
+  {
+    "rank": 71,
+    "icd_code": "Care involving use of other rehabilitation procedures",
+    "diagnosis_name": "Hypermetropia",
+    "visits": 132167.0,
+    "participants": 124298.0
+  },
+  {
+    "rank": 72,
+    "icd_code": "Z988",
+    "diagnosis_name": "Fever unspecified",
+    "visits": 129428.0,
+    "participants": 83284.0
+  },
+  {
+    "rank": 73,
+    "icd_code": "Z518",
+    "diagnosis_name": "Other specified postsurgical states",
+    "visits": 122661.0,
+    "participants": 28618.0
+  },
+  {
+    "rank": 74,
+    "icd_code": "H612",
+    "diagnosis_name": "Other specified medical care",
+    "visits": 122417.0,
+    "participants": 112990.0
+  },
+  {
+    "rank": 75,
+    "icd_code": "Z479",
+    "diagnosis_name": "Impacted cerumen",
+    "visits": 121198.0,
+    "participants": 50100.0
+  },
+  {
+    "rank": 76,
+    "icd_code": "N185",
+    "diagnosis_name": "Orthopaedic follow-up care, unspecified",
+    "visits": 120119.0,
+    "participants": 20343.0
+  },
+  {
+    "rank": 77,
+    "icd_code": "Z507",
+    "diagnosis_name": "Chronic kidney disease, stage 5",
+    "visits": 111878.0,
+    "participants": 12221.0
+  },
+  {
+    "rank": 78,
+    "icd_code": "H250",
+    "diagnosis_name": "Occupational therapy and vocational rehabilitation, not elsewhere classified",
+    "visits": 110357.0,
+    "participants": 77921.0
+  },
+  {
+    "rank": 79,
+    "icd_code": "K011",
+    "diagnosis_name": "Senile incipient cataract",
+    "visits": 109415.0,
+    "participants": 87462.0
+  },
+  {
+    "rank": 80,
+    "icd_code": "I251",
+    "diagnosis_name": "Impacted teeth",
+    "visits": 107541.0,
+    "participants": 87383.0
+  },
+  {
+    "rank": 81,
+    "icd_code": "Other specified surgical follow-up care",
+    "diagnosis_name": "Atherosclerotic heart disease",
+    "visits": 107374.0,
+    "participants": 49080.0
+  },
+  {
+    "rank": 82,
+    "icd_code": "H259",
+    "diagnosis_name": "Followup examination after other treatment for malignant neoplasm",
+    "visits": 107298.0,
+    "participants": 84101.0
+  },
+  {
+    "rank": 83,
+    "icd_code": "H251",
+    "diagnosis_name": "Senile cataract, unspecified",
+    "visits": 105779.0,
+    "participants": 73539.0
+  },
+  {
+    "rank": 84,
+    "icd_code": "Followup examination after unspecified treatment for other conditions",
+    "diagnosis_name": "Senile nuclear cataract",
+    "visits": 104998.0,
+    "participants": 48526.0
+  },
+  {
+    "rank": 85,
+    "icd_code": "N40",
+    "diagnosis_name": "Followup examination after combined treatment for other conditions",
+    "visits": 104091.0,
+    "participants": 72000.0
+  },
+  {
+    "rank": 86,
+    "icd_code": "I119",
+    "diagnosis_name": "Hyperplasia of prostate",
+    "visits": 104038.0,
+    "participants": 86639.0
+  },
+  {
+    "rank": 87,
+    "icd_code": "R11",
+    "diagnosis_name": "Hypertensive heart disease without (congestive) heart failure",
+    "visits": 100671.0,
+    "participants": 97040.0
+  },
+  {
+    "rank": 88,
+    "icd_code": "Z548",
+    "diagnosis_name": "Nausea and vomiting",
+    "visits": 95968.0,
+    "participants": 43131.0
+  },
+  {
+    "rank": 89,
+    "icd_code": "H110",
+    "diagnosis_name": "Convalescence following other treatment",
+    "visits": 93377.0,
+    "participants": 75203.0
+  },
+  {
+    "rank": 90,
+    "icd_code": "Other and unspecified abdominal pain",
+    "diagnosis_name": "Pterygium",
+    "visits": 92942.0,
+    "participants": 73974.0
+  },
+  {
+    "rank": 91,
+    "icd_code": "R42",
+    "diagnosis_name": "Asthma unspecified",
+    "visits": 92041.0,
+    "participants": 83159.0
+  },
+  {
+    "rank": 92,
+    "icd_code": "E149",
+    "diagnosis_name": "Dizziness and giddiness",
+    "visits": 90044.0,
+    "participants": 65736.0
+  },
+  {
+    "rank": 93,
+    "icd_code": "Followup examination after surgery for other conditions",
+    "diagnosis_name": "Unspecified diabetes mellitus without complications",
+    "visits": 89897.0,
+    "participants": 59700.0
+  },
+  {
+    "rank": 94,
+    "icd_code": "T141",
+    "diagnosis_name": "Surgical followup care unspecified",
+    "visits": 89050.0,
+    "participants": 84504.0
+  },
+  {
+    "rank": 95,
+    "icd_code": "Personal history of other mental and behavioural disorders",
+    "diagnosis_name": "Open wound of unspecified body region",
+    "visits": 88425.0,
+    "participants": 62511.0
+  },
+  {
+    "rank": 96,
+    "icd_code": "Z340",
+    "diagnosis_name": "Supervision of normal pregnancy unspecified",
+    "visits": 87750.0,
+    "participants": 61954.0
+  },
+  {
+    "rank": 97,
+    "icd_code": "A162",
+    "diagnosis_name": "Supervision of normal first pregnancy",
+    "visits": 87112.0,
+    "participants": 69905.0
+  },
+  {
+    "rank": 98,
+    "icd_code": "J449",
+    "diagnosis_name": "Tuberculosis of lung, without mention of bacteriological or histological confirmation",
+    "visits": 85494.0,
+    "participants": 63091.0
+  },
+  {
+    "rank": 99,
+    "icd_code": "N390",
+    "diagnosis_name": "Chronic obstructive pulmonary disease, unspecified",
+    "visits": 80254.0,
+    "participants": 75385.0
+  },
+  {
+    "rank": 100,
+    "icd_code": "Z011",
+    "diagnosis_name": "Urinary tract infection, site not specified",
+    "visits": 80238.0,
+    "participants": 43175.0
+  },
+  {
+    "rank": 0,
+    "icd_code": "TOTAL",
+    "diagnosis_name": "Total 100 Penyakit Terbanyak RJTL 2018",
+    "visits": 71080287.0,
+    "participants": 22643913.0,
+    "is_total": true
+  }
+]
