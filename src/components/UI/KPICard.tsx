@@ -1,5 +1,5 @@
 import React from "react";
-import { formatNumber, formatCurrency } from "@/lib/utils";
+import { CountUpNumber } from "@/components/UI/CountUpNumber";
 
 interface KPICardProps {
   title: string;
@@ -22,10 +22,6 @@ export const KPICard: React.FC<KPICardProps> = ({
   decimals = 0,
   icon: Icon,
 }) => {
-  const formatted = isCurrency
-    ? formatCurrency(value)
-    : formatNumber(value, decimals);
-
   return (
     <div className="bg-white border border-brand-border rounded-xl p-4 shadow-xs hover:shadow-md transition-shadow relative overflow-hidden group">
       <div className="flex items-start justify-between gap-2">
@@ -34,12 +30,16 @@ export const KPICard: React.FC<KPICardProps> = ({
             {title}
           </span>
           <div className="mt-1 flex items-baseline gap-1.5 flex-wrap">
-            <span className="text-xl sm:text-2xl font-bold text-brand-dark tracking-tight">
-              {formatted}
-            </span>
+            <CountUpNumber
+              value={value}
+              isCurrency={isCurrency}
+              decimals={decimals}
+              className="text-xl sm:text-2xl font-bold text-brand-dark tracking-tight"
+            />
             {unit && <span className="text-xs text-brand-text-secondary font-medium">{unit}</span>}
           </div>
         </div>
+
         {Icon && (
           <div className="w-9 h-9 rounded-lg bg-brand-soft text-brand-primary flex items-center justify-center shrink-0 group-hover:bg-brand-primary group-hover:text-white transition-colors">
             <Icon className="w-5 h-5" />

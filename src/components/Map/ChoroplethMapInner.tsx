@@ -187,19 +187,19 @@ export default function ChoroplethMapInner({
     <div className="relative w-full h-full min-h-[480px] rounded-xl overflow-hidden border border-brand-border shadow-xs">
       <div ref={mapContainerRef} className="w-full h-full" />
 
-      {/* Map Controls Floating Overlay */}
-      <div className="absolute top-3 right-3 z-[400] bg-white/95 backdrop-blur-md p-1.5 rounded-lg border border-brand-border shadow-md flex items-center gap-1 text-xs">
+      {/* Map Layer Controls - top-left below zoom, z-index lower than drawer */}
+      <div className="absolute top-24 left-3 z-[300] bg-white/95 backdrop-blur-md p-1.5 rounded-lg border border-brand-border shadow-md flex flex-col gap-1 text-xs">
         <button
           onClick={() => setTileProvider("osm")}
-          className={`px-2.5 py-1 rounded font-semibold ${
+          className={`px-2.5 py-1 rounded font-semibold transition-colors ${
             tileProvider === "osm" ? "bg-brand-primary text-white" : "text-slate-600 hover:bg-slate-100"
           }`}
         >
-          OpenStreetMap
+          Peta
         </button>
         <button
           onClick={() => setTileProvider("satellite")}
-          className={`px-2.5 py-1 rounded font-semibold ${
+          className={`px-2.5 py-1 rounded font-semibold transition-colors ${
             tileProvider === "satellite" ? "bg-brand-primary text-white" : "text-slate-600 hover:bg-slate-100"
           }`}
         >

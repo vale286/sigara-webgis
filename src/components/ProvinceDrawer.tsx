@@ -1,10 +1,10 @@
 "use client";
 
 import React from "react";
-import { X, MapPin, TrendingUp, FileText, CheckCircle2 } from "lucide-react";
+import { X, MapPin, CheckCircle2 } from "lucide-react";
 import { JknRecord } from "@/lib/types";
-import { formatNumber, formatCurrency } from "@/lib/utils";
 import { DATA_CATALOG } from "@/lib/dataCatalog";
+import { CountUpNumber } from "@/components/UI/CountUpNumber";
 
 interface ProvinceDrawerProps {
   province: string | null;
@@ -24,7 +24,7 @@ export const ProvinceDrawer: React.FC<ProvinceDrawerProps> = ({
   const provRecords = records.filter((r) => r.province === province && r.year === year);
 
   return (
-    <div className="fixed inset-y-0 right-0 w-full sm:w-[480px] bg-white border-l border-brand-border shadow-2xl z-50 flex flex-col transform transition-transform duration-300">
+    <div className="fixed inset-y-0 right-0 w-full sm:w-[480px] bg-white border-l border-brand-border shadow-2xl z-[1300] flex flex-col transform transition-transform duration-300 animate-slide-in-right">
       {/* Drawer Header */}
       <div className="p-5 border-b border-brand-border flex items-center justify-between bg-brand-soft/50">
         <div className="flex items-center gap-3">
@@ -63,11 +63,12 @@ export const ProvinceDrawer: React.FC<ProvinceDrawerProps> = ({
                   <span className="text-[10px] text-brand-text-secondary font-medium block truncate">
                     {r.indicator_name}
                   </span>
-                  <span className="text-sm font-bold text-brand-dark">
-                    {r.indicator_id.startsWith("6")
-                      ? formatCurrency(r.value)
-                      : formatNumber(r.value)}
-                  </span>
+                  <CountUpNumber
+                    value={r.value}
+                    isCurrency={r.indicator_id.startsWith("6")}
+                    decimals={0}
+                    className="text-sm font-bold text-brand-dark"
+                  />
                 </div>
               ))}
           </div>
@@ -102,9 +103,12 @@ export const ProvinceDrawer: React.FC<ProvinceDrawerProps> = ({
                   </div>
 
                   <div className="text-right shrink-0">
-                    <span className="font-bold text-brand-dark block text-sm">
-                      {isCost ? formatCurrency(rec?.value) : formatNumber(rec?.value, meta.type === "count" ? 0 : 2)}
-                    </span>
+                    <CountUpNumber
+                      value={rec?.value}
+                      isCurrency={isCost}
+                      decimals={meta.type === "count" ? 0 : 2}
+                      className="font-bold text-brand-dark block text-sm"
+                    />
                     <span className="text-[10px] text-brand-text-secondary">{meta.unit}</span>
                   </div>
                 </div>

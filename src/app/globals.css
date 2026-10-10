@@ -55,3 +55,31 @@ body {
   border-radius: 0.75rem;
   z-index: 10;
 }
+
+/* Keep all Leaflet internal panes well below the ProvinceDrawer (z-[1300]) */
+.leaflet-pane,
+.leaflet-top,
+.leaflet-bottom {
+  z-index: 400 !important;
+}
+
+.leaflet-control {
+  z-index: 400 !important;
+}
+
+/* Slide-in animation for ProvinceDrawer */
+@keyframes slide-in-right {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.animate-slide-in-right {
+  animation: slide-in-right 0.3s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
