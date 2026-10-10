@@ -54,11 +54,11 @@ export const ModuleGeoAI: React.FC = () => {
       <div className="bg-gradient-to-r from-slate-900 via-brand-dark to-slate-900 text-white rounded-2xl p-6 sm:p-8 shadow-xl relative overflow-hidden">
         <div className="relative z-10 space-y-3 max-w-3xl">
           <div className="flex items-center gap-2">
-            <span className="px-3 py-1 rounded-full bg-amber-500/20 text-amber-300 text-xs font-bold border border-amber-500/30">
-              Simulasi Proposal 2026
-            </span>
             <span className="px-3 py-1 rounded-full bg-cyan-500/20 text-cyan-300 text-xs font-bold border border-cyan-500/30">
               KOTA KUPANG DEMO
+            </span>
+            <span className="px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-300 text-xs font-bold border border-emerald-500/30">
+              OPERASIONAL VERIFIKATOR
             </span>
           </div>
 
@@ -72,7 +72,7 @@ export const ModuleGeoAI: React.FC = () => {
 
           <div className="pt-2 flex items-center gap-2 border-t border-white/10 text-[11px] text-slate-400">
             <Info className="w-4 h-4 text-cyan-400 shrink-0" />
-            <span>Data rujukan individu bersifat sintetis untuk keperluan studi kasus proposal Healthkathon 2026.</span>
+            <span>Data rujukan disintesis untuk keperluan verifikasi operasional dan audit rujukan internal BPJS Kesehatan.</span>
           </div>
         </div>
       </div>
@@ -87,7 +87,7 @@ export const ModuleGeoAI: React.FC = () => {
               : "text-brand-text-secondary hover:bg-brand-soft"
           }`}
         >
-          Studi Kasus Proposal (SIM-R01516)
+          Studi Kasus Pemeriksaan (SIM-R01516)
         </button>
         <button
           onClick={() => setActiveTab("simulator")}
@@ -97,9 +97,10 @@ export const ModuleGeoAI: React.FC = () => {
               : "text-brand-text-secondary hover:bg-brand-soft"
           }`}
         >
-          Simulator Triase Rujukan Interactive
+          Simulator Triase Rujukan Interaktif
         </button>
       </div>
+
 
       {/* Case Study Tab */}
       {activeTab === "case-study" && (

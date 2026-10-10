@@ -26,27 +26,40 @@ export const Header: React.FC<HeaderProps> = ({
   return (
     <header className="sticky top-0 z-30 bg-white/95 backdrop-blur-md border-b border-brand-border px-6 py-3 flex flex-wrap items-center justify-between gap-4 shadow-sm">
       <div className="flex items-center gap-3">
-        <div className="w-11 h-11 rounded-xl bg-white border border-brand-border shadow-xs overflow-hidden flex items-center justify-center shrink-0 p-0.5">
+        {/* Logo BPJS Kesehatan */}
+        <div className="h-10 flex items-center justify-center shrink-0">
+          <img
+            src="/logo/Logo%20BPJS%20Kesehatan.jfif"
+            alt="Logo BPJS Kesehatan"
+            className="h-9 sm:h-10 w-auto object-contain rounded-md"
+          />
+        </div>
+
+        {/* Maskot Bang Jakes */}
+        <div className="w-10 h-10 rounded-xl bg-white border border-brand-border shadow-xs overflow-hidden flex items-center justify-center shrink-0 p-0.5">
           <img
             src="/logo/Bang%20Jakes%20Maskot.png"
             alt="Bang Jakes Maskot BPJS Kesehatan"
             className="w-full h-full object-contain"
           />
         </div>
-        <div>
+
+        {/* Blok Teks Informasi Aplikasi */}
+        <div className="flex flex-col justify-center">
           <div className="flex items-center gap-2">
-            <h1 className="text-lg font-bold text-brand-dark tracking-tight">
+            <h1 className="text-lg font-extrabold text-brand-dark tracking-tight leading-none">
               SIGARA <span className="text-brand-accent font-semibold text-sm">WebGIS</span>
             </h1>
-            <span className="px-2 py-0.5 text-xs font-medium rounded-full bg-brand-soft text-brand-primary border border-brand-secondary/30">
+            <span className="px-2.5 py-0.5 text-xs font-semibold rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200/60 shadow-xs">
               Healthkathon 2026
             </span>
           </div>
-          <p className="text-xs text-brand-text-secondary hidden sm:block">
+          <p className="text-xs text-slate-500 font-normal mt-1 hidden sm:block">
             Sistem Informasi Geografis Agentik untuk Rujukan Akuntabel
           </p>
         </div>
       </div>
+
 
       <div className="flex items-center gap-3 flex-wrap">
         {/* Year Selector */}

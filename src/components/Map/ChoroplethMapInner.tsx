@@ -137,12 +137,13 @@ export default function ChoroplethMapInner({
 
       const marker = L.circleMarker([c.lat, c.lng], {
         radius: isSelected ? radius + 4 : radius,
-        fillColor: color,
-        color: isSelected ? "#1FA7C9" : "#ffffff",
-        weight: isSelected ? 3.5 : 2,
+        fillColor: isSelected ? "#1E5631" : color,
+        color: isSelected ? "#1E5631" : "#74C69D",
+        weight: isSelected ? 4 : 2.5,
         opacity: 1,
-        fillOpacity: val === null ? 0.3 : 0.85,
+        fillOpacity: isSelected ? 0.95 : (val === null ? 0.3 : 0.85),
       });
+
 
       // Bind Tooltip
       marker.bindTooltip(

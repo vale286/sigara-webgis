@@ -153,12 +153,13 @@ export const ModuleDiagnosis: React.FC = () => {
         <div className="flex flex-wrap items-center justify-between gap-4">
           <div>
             <h4 className="text-sm font-bold text-brand-dark">
-              Tabel 100 Diagnosis Terbanyak RJTL 2018
+              Daftar 100 Diagnosis Terbanyak RJTL 2018
             </h4>
             <p className="text-xs text-brand-text-secondary">
               Pencarian berdasarkan Kode ICD-10 atau Deskripsi Diagnosis
             </p>
           </div>
+
 
           <div className="relative">
             <Search className="w-3.5 h-3.5 text-slate-400 absolute left-3 top-2.5" />

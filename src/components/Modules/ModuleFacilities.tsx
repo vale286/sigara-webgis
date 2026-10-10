@@ -187,7 +187,7 @@ export const ModuleFacilities: React.FC<ModuleFacilitiesProps> = ({
         <div className="flex flex-wrap items-center justify-between gap-4">
           <div>
             <h4 className="text-sm font-bold text-brand-dark">Daftar 34 Provinsi - {activeMeta.name} ({year})</h4>
-            <p className="text-xs text-brand-text-secondary">Tabel indikator ketersediaan faskes terurut</p>
+            <p className="text-xs text-brand-text-secondary">Indikator ketersediaan faskes terurut</p>
           </div>
 
           <div className="relative">
@@ -209,7 +209,6 @@ export const ModuleFacilities: React.FC<ModuleFacilitiesProps> = ({
                 <th className="px-4 py-3">Peringkat</th>
                 <th className="px-4 py-3">Provinsi</th>
                 <th className="px-4 py-3 text-right">Nilai ({activeMeta.unit})</th>
-                <th className="px-4 py-3">Sumber Data</th>
               </tr>
             </thead>
             <tbody className="divide-y divide-brand-border">
@@ -225,7 +224,6 @@ export const ModuleFacilities: React.FC<ModuleFacilitiesProps> = ({
                   <td className="px-4 py-2.5 text-right font-bold">
                     {formatNumber(r.value, metricMode === "count" ? 0 : 2)}
                   </td>
-                  <td className="px-4 py-2.5 text-slate-500 text-[10px] font-mono">{r.source_file}</td>
                 </tr>
               ))}
             </tbody>
@@ -235,3 +233,4 @@ export const ModuleFacilities: React.FC<ModuleFacilitiesProps> = ({
     </div>
   );
 };
+

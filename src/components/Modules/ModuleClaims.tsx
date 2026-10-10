@@ -148,7 +148,7 @@ export const ModuleClaims: React.FC<ModuleClaimsProps> = ({
       {/* Sortable Table */}
       <div className="bg-white border border-brand-border rounded-xl p-5 shadow-xs space-y-4">
         <div className="flex flex-wrap items-center justify-between gap-4">
-          <h4 className="text-sm font-bold text-brand-dark">Tabel 34 Provinsi - {activeMeta.name} ({year})</h4>
+          <h4 className="text-sm font-bold text-brand-dark">Daftar 34 Provinsi - {activeMeta.name} ({year})</h4>
           <div className="relative">
             <Search className="w-3.5 h-3.5 text-slate-400 absolute left-3 top-2.5" />
             <input
@@ -168,7 +168,6 @@ export const ModuleClaims: React.FC<ModuleClaimsProps> = ({
                 <th className="px-4 py-3">Peringkat</th>
                 <th className="px-4 py-3">Provinsi</th>
                 <th className="px-4 py-3 text-right">Rerata Biaya ({activeMeta.unit})</th>
-                <th className="px-4 py-3">Sumber File</th>
               </tr>
             </thead>
             <tbody className="divide-y divide-brand-border">
@@ -177,7 +176,6 @@ export const ModuleClaims: React.FC<ModuleClaimsProps> = ({
                   <td className="px-4 py-2.5 font-mono text-slate-500">{idx + 1}</td>
                   <td className="px-4 py-2.5 font-medium">{r.province}</td>
                   <td className="px-4 py-2.5 text-right font-bold">{formatCurrency(r.value)}</td>
-                  <td className="px-4 py-2.5 text-slate-500 text-[10px] font-mono">{r.source_file}</td>
                 </tr>
               ))}
             </tbody>
@@ -187,3 +185,4 @@ export const ModuleClaims: React.FC<ModuleClaimsProps> = ({
     </div>
   );
 };
+

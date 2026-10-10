@@ -8,6 +8,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+      },
       colors: {
         brand: {
           dark: "#163A32",
@@ -25,3 +28,4 @@ const config: Config = {
   plugins: [],
 };
 export default config;
+

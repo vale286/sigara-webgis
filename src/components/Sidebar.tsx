@@ -25,9 +25,10 @@ export const NAV_ITEMS: { id: ModuleId; label: string; icon: React.ElementType; 
   { id: "utilization", label: "Akses & Pemanfaatan", icon: Activity },
   { id: "claims", label: "Analisis Biaya Klaim", icon: DollarSign },
   { id: "diagnosis", label: "Profil Diagnosis RJTL", icon: FileText },
-  { id: "geoai", label: "GeoAI Pemeriksaan Rujukan", icon: Cpu, badge: "Simulasi 2026" },
+  { id: "geoai", label: "GeoAI Pemeriksaan Rujukan", icon: Cpu },
   { id: "methodology", label: "Metodologi & Asisten", icon: BookOpen },
 ];
+
 
 export const Sidebar: React.FC<SidebarProps> = ({ activeModule, setActiveModule }) => {
   return (

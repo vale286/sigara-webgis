@@ -21,7 +21,6 @@ export const KPICard: React.FC<KPICardProps> = ({
   isCurrency = false,
   decimals = 0,
   icon: Icon,
-  provenance,
 }) => {
   const formatted = isCurrency
     ? formatCurrency(value)
@@ -49,12 +48,7 @@ export const KPICard: React.FC<KPICardProps> = ({
       </div>
 
       {subtitle && <p className="text-[11px] text-brand-text-secondary mt-2 leading-tight">{subtitle}</p>}
-
-      {provenance && (
-        <div className="mt-2.5 pt-2 border-t border-brand-border/60 flex items-center justify-between text-[10px] text-brand-text-secondary">
-          <span className="truncate font-mono">Src: {provenance}</span>
-        </div>
-      )}
     </div>
   );
 };
+

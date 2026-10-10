@@ -226,7 +226,6 @@ export const ModuleUtilization: React.FC<ModuleUtilizationProps> = ({
                 <th className="px-4 py-3">Peringkat</th>
                 <th className="px-4 py-3">Provinsi</th>
                 <th className="px-4 py-3 text-right">Nilai ({activeMeta.unit})</th>
-                <th className="px-4 py-3">Sumber Data</th>
               </tr>
             </thead>
             <tbody className="divide-y divide-brand-border">
@@ -235,7 +234,6 @@ export const ModuleUtilization: React.FC<ModuleUtilizationProps> = ({
                   <td className="px-4 py-2.5 font-mono text-slate-500">{idx + 1}</td>
                   <td className="px-4 py-2.5 font-medium">{r.province}</td>
                   <td className="px-4 py-2.5 text-right font-bold">{formatNumber(r.value, 1)}</td>
-                  <td className="px-4 py-2.5 text-slate-500 text-[10px] font-mono">{r.source_file}</td>
                 </tr>
               ))}
             </tbody>
@@ -245,3 +243,4 @@ export const ModuleUtilization: React.FC<ModuleUtilizationProps> = ({
     </div>
   );
 };
+

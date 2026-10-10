@@ -42,13 +42,13 @@ export const ModuleSummary: React.FC<ModuleSummaryProps> = ({
   records,
   setActiveModule,
 }) => {
-  const isAll = selectedProvince === "Semua";
+  const isAll = selectedProvince === "Semua" || selectedProvince === "Nasional";
 
   // Helper to extract metric value for current selection & year
   const getVal = (indicatorId: string) => {
     if (isAll) {
       const rec = records.find(
-        (r) => r.indicator_id === indicatorId && r.is_national && r.year === year
+        (r) => r.indicator_id === indicatorId && (r.is_national || r.province === "Nasional") && r.year === year
       );
       return rec ? rec.value : null;
     } else {
@@ -65,7 +65,7 @@ export const ModuleSummary: React.FC<ModuleSummaryProps> = ({
   // Participant growth 2014-2018
   const participantTrend = [2014, 2015, 2016, 2017, 2018].map((y) => {
     const rec = isAll
-      ? records.find((r) => r.indicator_id === "1.3" && r.is_national && r.year === y)
+      ? records.find((r) => r.indicator_id === "1.3" && (r.is_national || r.province === "Nasional") && r.year === y)
       : records.find(
           (r) =>
             r.indicator_id === "1.3" &&
@@ -101,7 +101,7 @@ export const ModuleSummary: React.FC<ModuleSummaryProps> = ({
               34 Provinsi
             </span>
             <span className="px-3 py-1 rounded-full bg-emerald-500/30 text-emerald-200 text-xs font-semibold backdrop-blur-md">
-              Bukan Bukti Fraud
+              Operasional Verifikator
             </span>
           </div>
 
@@ -124,7 +124,7 @@ export const ModuleSummary: React.FC<ModuleSummaryProps> = ({
               onClick={() => setActiveModule("geoai")}
               className="px-4 py-2 rounded-xl bg-white/10 hover:bg-white/20 text-white text-xs font-semibold backdrop-blur-md transition-all border border-white/20"
             >
-              Lihat Demo GeoAI Rujukan 2026
+              Lihat Modul GeoAI Rujukan
             </button>
           </div>
         </div>
@@ -138,7 +138,6 @@ export const ModuleSummary: React.FC<ModuleSummaryProps> = ({
             Konteks Terpilih: {isAll ? "Nasional (Seluruh Indonesia)" : selectedProvince} ({year})
           </span>
         </div>
-        <DataProvenanceBadge filename="Tabel 1.3-Pertumbuhan Peserta JKN per Provinsi.xlsx" year={year} />
       </div>
 
       {/* KPI Cards Grid */}
@@ -148,7 +147,6 @@ export const ModuleSummary: React.FC<ModuleSummaryProps> = ({
           value={getVal("1.3")}
           unit="peserta"
           icon={Users}
-          provenance="Tabel 1.3"
           subtitle={`Peserta terdaftar tahun ${year}`}
         />
         <KPICard
@@ -156,7 +154,6 @@ export const ModuleSummary: React.FC<ModuleSummaryProps> = ({
           value={getVal("3.2")}
           unit="puskesmas"
           icon={Building2}
-          provenance="Tabel 3.2"
           subtitle="Faskes Tingkat Pertama (Puskesmas)"
         />
         <KPICard
@@ -164,7 +161,6 @@ export const ModuleSummary: React.FC<ModuleSummaryProps> = ({
           value={getVal("3.4")}
           unit="dokter"
           icon={Stethoscope}
-          provenance="Tabel 3.4"
           subtitle="Dokter Praktik Perorangan"
         />
         <KPICard
@@ -172,7 +168,6 @@ export const ModuleSummary: React.FC<ModuleSummaryProps> = ({
           value={getVal("3.8")}
           unit="FKRTL"
           icon={Hospital}
-          provenance="Tabel 3.8"
           subtitle="Fasilitas Rujukan Tingkat Lanjutan"
         />
       </div>
@@ -184,7 +179,6 @@ export const ModuleSummary: React.FC<ModuleSummaryProps> = ({
           unit="orang / 10.000"
           decimals={1}
           icon={Activity}
-          provenance="Tabel 4.3.3"
           subtitle="Peserta unik mengakses RJTL"
         />
         <KPICard
@@ -193,7 +187,6 @@ export const ModuleSummary: React.FC<ModuleSummaryProps> = ({
           unit="kunjungan / 10.000"
           decimals={1}
           icon={TrendingUp}
-          provenance="Tabel 5.3.3"
           subtitle="Total kunjungan pelayanan RJTL"
         />
         <KPICard
@@ -202,7 +195,6 @@ export const ModuleSummary: React.FC<ModuleSummaryProps> = ({
           unit="admisi / 10.000"
           decimals={1}
           icon={Hospital}
-          provenance="Tabel 5.4.5"
           subtitle="Total admisi rawat inap RITL"
         />
         <KPICard
@@ -210,7 +202,6 @@ export const ModuleSummary: React.FC<ModuleSummaryProps> = ({
           value={getVal("6.2.3")}
           isCurrency
           icon={DollarSign}
-          provenance="Tabel 6.2.3"
           subtitle="Rerata Rp per kunjungan RJTL"
         />
       </div>
@@ -226,7 +217,6 @@ export const ModuleSummary: React.FC<ModuleSummaryProps> = ({
                 {isAll ? "Nasional Indonesia" : selectedProvince}
               </p>
             </div>
-            <DataProvenanceBadge filename="Tabel 1.3" year={year} />
           </div>
 
           <div className="h-64">
@@ -263,7 +253,6 @@ export const ModuleSummary: React.FC<ModuleSummaryProps> = ({
                 Perbandingan kategori faskes di {isAll ? "Nasional" : selectedProvince}
               </p>
             </div>
-            <DataProvenanceBadge filename="Tabel 3.2, 3.4, 3.6, 3.8" year={year} />
           </div>
 
           <div className="h-64">
@@ -282,3 +271,4 @@ export const ModuleSummary: React.FC<ModuleSummaryProps> = ({
     </div>
   );
 };
+
