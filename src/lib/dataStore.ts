@@ -59,17 +59,20 @@ export async function fetchJknData(): Promise<JknRecord[]> {
             ? vals.reduce((a, b) => a + b, 0)
             : vals.reduce((a, b) => a + b, 0) / vals.length;
 
+        const category: "peserta" | "faskes" | "pelayanan" | "biaya" = meta?.category || "peserta";
+
         data.push({
           indicator_id,
           indicator_name: meta?.name || indicator_id,
           unit: meta?.unit || "",
-          category: (meta?.category as "peserta" | "faskes" | "pelayanan" | "biaya") || "peserta",
+          category,
           province: "Nasional",
           year,
           value: val,
           is_national: true,
           source_file: meta?.filename || "",
         });
+
 
       }
     });
