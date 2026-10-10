@@ -29,11 +29,12 @@ export const Header: React.FC<HeaderProps> = ({
         {/* Logo BPJS Kesehatan */}
         <div className="h-10 flex items-center justify-center shrink-0">
           <img
-            src="/logo/Logo%20BPJS%20Kesehatan.jfif"
+            src="/logo/Logo%20BPJS%20Kesehatan.png"
             alt="Logo BPJS Kesehatan"
             className="h-9 sm:h-10 w-auto object-contain rounded-md"
           />
         </div>
+
 
         {/* Maskot Bang Jakes */}
         <div className="w-10 h-10 rounded-xl bg-white border border-brand-border shadow-xs overflow-hidden flex items-center justify-center shrink-0 p-0.5">

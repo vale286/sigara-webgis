@@ -63,13 +63,14 @@ export async function fetchJknData(): Promise<JknRecord[]> {
           indicator_id,
           indicator_name: meta?.name || indicator_id,
           unit: meta?.unit || "",
-          category: meta?.category || "",
+          category: (meta?.category as "peserta" | "faskes" | "pelayanan" | "biaya") || "peserta",
           province: "Nasional",
           year,
           value: val,
           is_national: true,
           source_file: meta?.filename || "",
         });
+
       }
     });
 
