@@ -5,6 +5,12 @@ import L from "leaflet";
 import { JknRecord } from "@/lib/types";
 import { getChoroplethColor, formatNumber, formatCurrency } from "@/lib/utils";
 
+interface ProvinceCentroid {
+  name: string;
+  lat: number;
+  lng: number;
+}
+
 interface ChoroplethMapInnerProps {
   indicatorId: string;
   indicatorName: string;
@@ -26,20 +32,20 @@ export default function ChoroplethMapInner({
 }: ChoroplethMapInnerProps) {
   const mapContainerRef = useRef<HTMLDivElement>(null);
   const mapInstanceRef = useRef<L.Map | null>(null);
-  const geojsonLayerRef = useRef<L.GeoJSON | null>(null);
+  const layerGroupRef = useRef<L.LayerGroup | null>(null);
 
-  const [geoJsonData, setGeoJsonData] = useState<any>(null);
-  const [tileProvider, setTileProvider] = useState<"light" | "streets" | "satellite">("light");
+  const [centroids, setCentroids] = useState<ProvinceCentroid[]>([]);
+  const [tileProvider, setTileProvider] = useState<"osm" | "light" | "satellite">("osm");
 
-  // Fetch 34 province GeoJSON
+  // Fetch 34 province centroids
   useEffect(() => {
-    fetch("/data/indonesia_provinces_34.geojson")
+    fetch("/data/indonesia_province_centroids.json")
       .then((res) => res.json())
-      .then((data) => setGeoJsonData(data))
-      .catch((err) => console.error("GeoJSON error:", err));
+      .then((data) => setCentroids(data))
+      .catch((err) => console.error("Centroids error:", err));
   }, []);
 
-  // Filter current indicator + year
+  // Filter current indicator + year records
   const currentRecords = records.filter(
     (r) => r.indicator_id === indicatorId && r.year === year && !r.is_national
   );
@@ -64,46 +70,47 @@ export default function ChoroplethMapInner({
 
     mapInstanceRef.current = map;
 
+    // Create layer group for province markers
+    const layerGroup = L.layerGroup().addTo(map);
+    layerGroupRef.current = layerGroup;
+
     return () => {
       map.remove();
       mapInstanceRef.current = null;
     };
   }, []);
 
-  // Handle Tile Layers
+  // Handle Tile Layers (No API key watermarks)
   useEffect(() => {
     if (!mapInstanceRef.current) return;
     const map = mapInstanceRef.current;
 
-    // Remove existing tile layers
     map.eachLayer((layer) => {
       if (layer instanceof L.TileLayer) {
         map.removeLayer(layer);
       }
     });
 
-    let tileUrl = "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png";
-    let attr = '&copy; <a href="https://carto.com/">CARTO</a>';
+    let tileUrl = "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png";
+    let attr = '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors';
 
-    if (tileProvider === "streets") {
+    if (tileProvider === "light") {
       tileUrl = "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png";
-      attr = '&copy; OpenStreetMap contributors';
     } else if (tileProvider === "satellite") {
       tileUrl = "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}";
-      attr = 'Esri, Maxar, Earthstar Geographics';
+      attr = "Esri, Maxar, Earthstar Geographics";
     }
 
-    L.tileLayer(tileUrl, { attribution: attr, maxZoom: 18 }).addTo(map);
+    L.tileLayer(tileUrl, { attribution: attr, maxZoom: 19 }).addTo(map);
   }, [tileProvider]);
 
-  // Render / Update Choropleth GeoJSON Layer
+  // Render Proportional Interactive Circle Markers
   useEffect(() => {
-    if (!mapInstanceRef.current || !geoJsonData) return;
-    const map = mapInstanceRef.current;
+    if (!mapInstanceRef.current || centroids.length === 0) return;
+    const layerGroup = layerGroupRef.current;
+    if (!layerGroup) return;
 
-    if (geojsonLayerRef.current) {
-      map.removeLayer(geojsonLayerRef.current);
-    }
+    layerGroup.clearLayers();
 
     const valueMap = new Map<string, number | null>();
     currentRecords.forEach((r) => {
@@ -112,57 +119,68 @@ export default function ChoroplethMapInner({
 
     const isCost = indicatorId.startsWith("6");
 
-    const geoJsonLayer = L.geoJSON(geoJsonData, {
-      style: (feature) => {
-        const provName = feature?.properties?.province || "";
-        const val = valueMap.get(provName.toLowerCase()) ?? null;
-        const color = getChoroplethColor(val, minVal, maxVal);
-        const isSelected = selectedProvince?.toLowerCase() === provName.toLowerCase();
+    centroids.forEach((c) => {
+      const val = valueMap.get(c.name.toLowerCase()) ?? null;
+      const color = getChoroplethColor(val, minVal, maxVal);
+      const isSelected = selectedProvince?.toLowerCase() === c.name.toLowerCase();
 
-        return {
-          fillColor: color,
-          weight: isSelected ? 3 : 1,
-          opacity: 1,
-          color: isSelected ? "#1FA7C9" : "#ffffff",
-          fillOpacity: val === null ? 0.2 : 0.75,
-        };
-      },
-      onEachFeature: (feature, layer) => {
-        const provName = feature?.properties?.province || "";
-        const val = valueMap.get(provName.toLowerCase()) ?? null;
+      // Calculate radius (from 10px to 26px) based on value
+      let radius = 12;
+      if (val !== null && maxVal > minVal) {
+        const ratio = (val - minVal) / (maxVal - minVal);
+        radius = 10 + ratio * 18;
+      }
 
-        const valText = isCost
-          ? formatCurrency(val)
-          : formatNumber(val, indicatorId.startsWith("3") && !indicatorId.endsWith("2") ? 2 : 0);
+      const valText = isCost
+        ? formatCurrency(val)
+        : formatNumber(val, indicatorId.startsWith("3") && !indicatorId.endsWith("2") ? 2 : 0);
 
-        layer.bindTooltip(
-          `<div class="p-1 font-sans">
-            <strong class="text-brand-dark block text-xs font-bold">${provName}</strong>
-            <span class="text-xs text-slate-600">${indicatorName}:</span>
-            <span class="text-xs font-bold text-brand-primary block">${valText} ${unit}</span>
-            <span class="text-[10px] text-slate-400 block mt-0.5">Tahun ${year} | 34 Provinsi</span>
-          </div>`,
-          { sticky: true }
-        );
+      const marker = L.circleMarker([c.lat, c.lng], {
+        radius: isSelected ? radius + 4 : radius,
+        fillColor: color,
+        color: isSelected ? "#1FA7C9" : "#ffffff",
+        weight: isSelected ? 3.5 : 2,
+        opacity: 1,
+        fillOpacity: val === null ? 0.3 : 0.85,
+      });
 
-        layer.on({
-          click: () => {
-            onSelectProvince(provName);
-          },
-          mouseover: (e) => {
-            const l = e.target;
-            l.setStyle({ fillOpacity: 0.9, weight: 2 });
-          },
-          mouseout: (e) => {
-            const l = e.target;
-            geoJsonLayer.resetStyle(l);
-          },
-        });
-      },
-    }).addTo(map);
+      // Bind Tooltip
+      marker.bindTooltip(
+        `<div class="p-1 font-sans">
+          <strong class="text-brand-dark block text-xs font-bold">${c.name}</strong>
+          <span class="text-[11px] text-slate-600">${indicatorName}:</span>
+          <span class="text-xs font-bold text-brand-primary block">${valText} ${unit}</span>
+          <span class="text-[10px] text-slate-400 block mt-0.5">Tahun ${year} | Klik untuk detail</span>
+        </div>`,
+        { sticky: true }
+      );
 
-    geojsonLayerRef.current = geoJsonLayer;
-  }, [geoJsonData, indicatorId, year, currentRecords, minVal, maxVal, selectedProvince]);
+      // Bind Popup
+      marker.bindPopup(
+        `<div class="p-2 font-sans text-xs">
+          <strong class="text-sm font-bold text-brand-dark block mb-1">${c.name}</strong>
+          <div class="text-slate-600 mb-1">${indicatorName} (${year}):</div>
+          <div class="text-sm font-bold text-brand-primary mb-2">${valText} ${unit}</div>
+          <button id="drawer-btn-${c.name.replace(/\s+/g, '-')}" class="w-full px-2.5 py-1 bg-brand-primary text-white rounded font-bold text-[11px]">
+            Buka Detail Provinsi
+          </button>
+        </div>`
+      );
+
+      marker.on("click", () => {
+        onSelectProvince(c.name);
+      });
+
+      marker.on("popupopen", () => {
+        const btn = document.getElementById(`drawer-btn-${c.name.replace(/\s+/g, '-')}`);
+        if (btn) {
+          btn.onclick = () => onSelectProvince(c.name);
+        }
+      });
+
+      marker.addTo(layerGroup);
+    });
+  }, [centroids, indicatorId, year, currentRecords, minVal, maxVal, selectedProvince, indicatorName, unit, onSelectProvince]);
 
   return (
     <div className="relative w-full h-full min-h-[480px] rounded-xl overflow-hidden border border-brand-border shadow-xs">
@@ -171,24 +189,16 @@ export default function ChoroplethMapInner({
       {/* Map Controls Floating Overlay */}
       <div className="absolute top-3 right-3 z-[400] bg-white/95 backdrop-blur-md p-1.5 rounded-lg border border-brand-border shadow-md flex items-center gap-1 text-xs">
         <button
-          onClick={() => setTileProvider("light")}
-          className={`px-2 py-1 rounded font-medium ${
-            tileProvider === "light" ? "bg-brand-primary text-white" : "text-slate-600 hover:bg-slate-100"
+          onClick={() => setTileProvider("osm")}
+          className={`px-2.5 py-1 rounded font-semibold ${
+            tileProvider === "osm" ? "bg-brand-primary text-white" : "text-slate-600 hover:bg-slate-100"
           }`}
         >
-          Light
-        </button>
-        <button
-          onClick={() => setTileProvider("streets")}
-          className={`px-2 py-1 rounded font-medium ${
-            tileProvider === "streets" ? "bg-brand-primary text-white" : "text-slate-600 hover:bg-slate-100"
-          }`}
-        >
-          Street
+          OpenStreetMap
         </button>
         <button
           onClick={() => setTileProvider("satellite")}
-          className={`px-2 py-1 rounded font-medium ${
+          className={`px-2.5 py-1 rounded font-semibold ${
             tileProvider === "satellite" ? "bg-brand-primary text-white" : "text-slate-600 hover:bg-slate-100"
           }`}
         >

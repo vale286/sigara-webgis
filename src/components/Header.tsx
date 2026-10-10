@@ -26,8 +26,12 @@ export const Header: React.FC<HeaderProps> = ({
   return (
     <header className="sticky top-0 z-30 bg-white/95 backdrop-blur-md border-b border-brand-border px-6 py-3 flex flex-wrap items-center justify-between gap-4 shadow-sm">
       <div className="flex items-center gap-3">
-        <div className="w-10 h-10 rounded-xl bg-brand-primary text-white flex items-center justify-center font-bold text-xl shadow-md">
-          S
+        <div className="w-11 h-11 rounded-xl bg-white border border-brand-border shadow-xs overflow-hidden flex items-center justify-center shrink-0 p-0.5">
+          <img
+            src="/logo/Bang%20Jakes%20Maskot.png"
+            alt="Bang Jakes Maskot BPJS Kesehatan"
+            className="w-full h-full object-contain"
+          />
         </div>
         <div>
           <div className="flex items-center gap-2">

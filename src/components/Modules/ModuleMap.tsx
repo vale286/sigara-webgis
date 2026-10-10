@@ -101,15 +101,6 @@ export const ModuleMap: React.FC<ModuleMapProps> = ({
           </select>
         </div>
 
-        <div className="flex items-center gap-2">
-          <DataProvenanceBadge filename={activeMeta.filename} year={year} unit={activeMeta.unit} />
-          <button
-            onClick={handleExportCSV}
-            className="px-3 py-1.5 rounded-lg bg-white border border-brand-border text-brand-dark text-xs font-semibold hover:bg-brand-soft transition-colors flex items-center gap-1.5 shadow-xs"
-          >
-            <Download className="w-3.5 h-3.5 text-brand-primary" /> Ekspor CSV
-          </button>
-        </div>
       </div>
 
       {/* Map + Quick Insights Sidebar */}
